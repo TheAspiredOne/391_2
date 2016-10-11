@@ -1,0 +1,26 @@
+
+sqlite3 munich.db
+
+
+CREATE TABLE poi(
+   id int,
+   uid int,
+   lat float,
+   lon float,
+   PRIMARY KEY(id)
+);
+
+CREATE TABLE poi_tag(
+   id int,
+   key VARCHAR(200),
+   value VARCHAR(200),
+   PRIMARY KEY(id))
+   FOREIGN KEY (id) REFERENCES poi(id)
+);
+
+
+.separator ","
+
+.import poi_projected.tsv poi
+.import poi_tag.tsv poi_tag
+

@@ -1,0 +1,13 @@
+CREATE VIRTUAL TABLE poi_index USING rtree(
+   id,
+   minLat, 
+   maxLat, 
+   minLon,
+   maxLon
+);
+
+.separator ","
+
+.import poi_rtree.tsv poi_index
+
+

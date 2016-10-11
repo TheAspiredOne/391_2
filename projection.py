@@ -14,7 +14,7 @@ with open(soutput_file, "w") as n:
                lon = float(sp[3])
                new_lat = lat*PROJECTION_RANGE/MAX_LAT
                new_lon = lon*PROJECTION_RANGE/MAX_LON
-               sp_new = "%s %s %s %s\n" % (sp[0], sp[1], str(new_lat), str(new_lon))
-               sp_2 = "%s %s %s %s %s\n " % (sp[0], str(new_lat-10),str(new_lat+10), str(new_lon-10), str(new_lon+10))
+               sp_new = "%s\t%s\t%s\t%s\n" % (sp[0], sp[1], str(new_lat), str(new_lon))
+               sp_2 = "%s\t%s\t%s\t%s\t%s\n " % (sp[0], str(new_lat-10),str(new_lat+10), str(new_lon-10), str(new_lon+10))
                n.write(sp_2)
                o.write(sp_new) 

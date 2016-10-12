@@ -17,7 +17,7 @@ CREATE TABLE poi_tag(
 );
 
 
-.mode tsv
+.separator "\t"
 
 .import poi_projected.tsv poi
 .import poi_tag.tsv poi_tag
